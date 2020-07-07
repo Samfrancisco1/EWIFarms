@@ -1,0 +1,48 @@
+.nav-link img {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.nav-link ul {
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.nav-link ul li{
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    background: transparent;
+    z-index: 3;
+};
+
+.nav-link ul li:hover{
+    border-bottom: 1px solid rgb(241, 143, 160);
+    color: rgb(241, 143, 160);;
+};
+
+.nav-link ul li a :focus{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-link ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.login{
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, rgb(249, 83, 198), rgb(185, 29, 115));
+    padding: 10px 50px;
+    font-size: 20px;
+    width: 100px;
+    border-radius: 20px;
+}
