@@ -3,6 +3,7 @@ import "./index.css";
 import Banner from '../../components/Banner';
 import How from '../../components/How';
 import Calculator from '../../components/Calculator';
+import About from '../../components/About';
 
 class LandingPage extends Component {
   render() {
@@ -12,6 +13,7 @@ class LandingPage extends Component {
           <Banner />
           <How />
           <Calculator />
+          <About />
         </div>
       </>
     )

@@ -5,7 +5,7 @@ export default class Calculator extends Component {
   render() {
     return (
       <>
-        <div className="calculator">
+        <section className="calculator">
             <h2>Investment Calculator</h2>
             <h4>Input the amount you want to invest and get how much your profit is!!</h4>
 
@@ -13,7 +13,7 @@ export default class Calculator extends Component {
                 <input type="number" name="amount" placeholder="Enter Amount" />
                 <label id="interest">Interest: 0</label>
             </form>
-        </div>
+        </section>
       </>
     )
   }
