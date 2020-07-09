@@ -12,9 +12,8 @@ export default function NabBar() {
             <li><a href="#how">How it works</a></li>
             <li><a href="#calculator">Investment Calculator</a></li>
             <li><a href="#about">About Us</a></li>
+            <li><a href="#about">Testimonies</a></li>
             <li><a href="#contact">Contact Us</a></li>
-            <li className="login">Sign In</li>
-            <li className="register">Sign Up</li>
         </ul>
     </div>
   );

@@ -8,7 +8,7 @@ export default function BannerVideo() {
     <>
         <div className="banner-video">
             <NavBar />
-            <video loop >
+            <video loop autoPlay>
                 <source src={ BgVideo } type="video/mp4" />
             </video>            
         </div>

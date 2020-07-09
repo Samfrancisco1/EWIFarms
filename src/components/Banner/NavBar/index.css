@@ -15,7 +15,7 @@
     text-decoration: none;
     padding-left: 20px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 15px;
     background: transparent;
     z-index: 3;
 };
@@ -29,6 +29,6 @@
 .nav-link ul li a {
     text-decoration: none;
     color: #000;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 20px;
 }
