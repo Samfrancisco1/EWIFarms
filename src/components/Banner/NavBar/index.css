@@ -1,34 +1,33 @@
 .nav-link img {
-    margin-left: 30px;
-    margin-top: 10px;
+	margin-left: 30px;
+	margin-top: 10px;
 }
 
 .nav-link ul {
-    float: right;
-    margin-right: 30px;
-    margin-top: 30px;
+	float: right;
+	margin-right: 30px;
+	margin-top: 30px;
 }
 
-.nav-link ul li{
-    display: inline;
-    list-style: none;
-    text-decoration: none;
-    padding-left: 20px;
-    font-weight: bold;
-    font-size: 15px;
-    background: transparent;
-    z-index: 3;
-};
+.nav-link ul li {
+	display: inline;
+	list-style: none;
+	text-decoration: none;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 15px;
+	background: transparent;
+	z-index: 3;
+}
 
-
-.nav-link ul li a :focus{
-    text-decoration: none;
-    color: #fff;
+.nav-link ul li a :focus {
+	text-decoration: none;
+	color: #fff;
 }
 
 .nav-link ul li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 15px;
-    border-radius: 20px;
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+	border-radius: 20px;
 }

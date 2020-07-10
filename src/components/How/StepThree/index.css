@@ -1,66 +1,64 @@
-
 .step3 {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .step3 img {
-    margin-top: 70px;
+	margin-top: 70px;
 }
 
 .earning::before {
-    content: '';
-    transition: skew(2deg, 2deg);
-    background-color: rgb(185, 29, 115);
-    z-index: 10;
+	content: "";
+	transition: skew(2deg, 2deg);
+	background-color: rgb(185, 29, 115);
+	z-index: 10;
 }
 
 .earning {
-    width: 45%;
-    height: auto;
-    float: right;
-    margin-top: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 70px;
-    border-radius: 20px;
-    border: 1px solid rgb(185, 29, 115);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
+	width: 45%;
+	height: auto;
+	float: right;
+	margin-top: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 70px;
+	border-radius: 20px;
+	border: 1px solid rgb(185, 29, 115);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 40%;
 }
 
-.earning:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    background-color: hotpink;
-    color: #fff;
+.earning:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	background-color: hotpink;
+	color: #fff;
 }
 
 .earning p {
-    width: 80%;
-    text-align: center;
+	width: 80%;
+	text-align: center;
 }
 
-.earning a:focus{
-    text-decoration: none;
-    color: #fff;
+.earning a:focus {
+	text-decoration: none;
+	color: #fff;
 }
 
-.earning a{
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(to right, rgb(249, 83, 198), rgb(185, 29, 115));
-    padding: 10px 40px;
-    font-size: 15px;
-    width: 170px;
-    border-radius: 20px;
-    margin-top: 50px;
+.earning a {
+	text-decoration: none;
+	color: #fff;
+	background: linear-gradient(to right, rgb(249, 83, 198), rgb(185, 29, 115));
+	padding: 10px 40px;
+	font-size: 15px;
+	width: 170px;
+	border-radius: 20px;
+	margin-top: 50px;
 }
 
-.earning a:hover{
-    text-decoration: none;
-    color: #fff;
-
+.earning a:hover {
+	text-decoration: none;
+	color: #fff;
 }
