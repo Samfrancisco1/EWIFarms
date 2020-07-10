@@ -29,7 +29,7 @@
 }
 
 .banner-text .typewriter {
-    margin-top: -70px;
+    margin-top: -10px;
 }
 
 .banner-text h4{
@@ -37,7 +37,8 @@
     width: 60%;
     text-align: center;
     color: #333;
-    margin-top: -50px;
+    margin-top: -10px;
+    padding-bottom: 70px;
 }
 
 .get-started-btn:focus{
@@ -45,12 +46,12 @@
     color: #fff;
 }
 
-.get-started-btn{
+.banner-button .get-started-btn{
     text-decoration: none;
     color: #fff;
     background: linear-gradient(to right, rgb(249, 83, 198), rgb(185, 29, 115));
     padding: 10px 50px;
-    font-size: 20px;
+    font-size: 15px;
     width: 100px;
     border-radius: 20px;
 }

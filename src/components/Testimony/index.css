@@ -1,0 +1,35 @@
+.testimony {
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.testimony h2{
+    margin-top: 50px;
+    color: rgb(185, 29, 115);
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+ .testimony .carousel {
+    height: 300px;
+ }
+
+ .testimony .carousel .carousel-item {
+    background-color: #000;
+    height: 300px;
+ }
+
+ .testimony .carousel .carousel-item .avatar {
+    width: 40%;
+    height: 40%; 
+    margin-top: 30px; 
+ }
+
+ .testimony .carousel .carousel-item .carousel-caption p {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+ }
+

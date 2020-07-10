@@ -1,4 +1,4 @@
-.how {
+.contact {
     overflow: hidden;
     width: 85%;
     background-color: #fff;
@@ -6,17 +6,13 @@
     z-index: 10;
     margin: auto;
     margin-top: -50px;
+    height: 300px;
 }
 
-.how h2{
+.contact h2{
     margin-top: 50px;
     color: rgb(185, 29, 115);
     text-align: center;
     font-weight: bold;
     font-size: 50px;
-}
-
-.how h4{
-    margin-top: -10px;
-    text-align: center;
 }

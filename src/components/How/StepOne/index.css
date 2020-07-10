@@ -50,7 +50,12 @@
     background: linear-gradient(to right, rgb(249, 83, 198), rgb(185, 29, 115));
     padding: 10px 40px;
     font-size: 15px;
-    width: 80px;
+    width: 200px;
     border-radius: 20px;
     margin-top: 50px;
+}
+
+.sign-up a:hover{
+    text-decoration: none;
+    color: #fff;
 }

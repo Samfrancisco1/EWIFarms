@@ -4,6 +4,8 @@ import Banner from '../../components/Banner';
 import How from '../../components/How';
 import Calculator from '../../components/Calculator';
 import About from '../../components/About';
+import Testimony from '../../components/Testimony';
+import Contact from '../../components/Contact';
 
 class LandingPage extends Component {
   render() {
@@ -14,6 +16,8 @@ class LandingPage extends Component {
           <How />
           <Calculator />
           <About />
+          <Testimony />
+          <Contact />
         </div>
       </>
     )
