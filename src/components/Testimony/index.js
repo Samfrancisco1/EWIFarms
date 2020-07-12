@@ -13,7 +13,7 @@ export default function Testimony() {
 
 	return (
 		<>
-			<section className="testimony">
+			<section id="testimony" className="testimony">
 				<h2>Testimonies</h2>
 				<Carousel activeIndex={index} onSelect={handleSelect}>
 					<Carousel.Item>

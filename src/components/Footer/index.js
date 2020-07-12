@@ -16,8 +16,8 @@ export default function Footer() {
 				}}
 			>
 				<p style={{ marginTop: "15px" }}>
-					Made with <span style={{ color: "#F60000;" }}>&#9829;</span> by Yabi
-					Francis | © 2020 Rachel Eye Center. All rights reserved
+					Made with <span style={{ color: "#F60000" }}>&#9829;</span> by Yabi
+					Francis | © 2020 EWIFarms. All rights reserved
 				</p>
 			</section>
 		</>

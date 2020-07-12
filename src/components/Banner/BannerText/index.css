@@ -17,8 +17,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 60%;
 	z-index: 10;
+	margin-top: 170px;
 }
 
 .banner-text h2 {

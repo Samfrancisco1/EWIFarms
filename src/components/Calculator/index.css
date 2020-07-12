@@ -38,8 +38,19 @@
 	margin-top: 50px;
 }
 
+.calculator form input[type="number"]:focus {
+	border: 1px solid hotpink;
+}
+
 .calculator form label {
 	font-weight: bold;
 	font-size: 18px;
 	padding-bottom: 100px;
+}
+
+.error{
+	font-weight: bold;
+	font-size: 18px;
+    padding-bottom: 100px;
+    color: #FF0000
 }
