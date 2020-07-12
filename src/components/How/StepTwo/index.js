@@ -26,7 +26,7 @@ export default function StepTwo() {
 
 						<Col sm={6}>
 							<div className="how-image">
-								<img src={Invest} alt="Step2" width="70%" />
+								<img src={Invest} alt="Step2" width="100%" />
 							</div>
 						</Col>
 					</Row>

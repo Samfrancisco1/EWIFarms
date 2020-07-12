@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Typical from "react-typical";
+import { Link } from "react-router-dom";
 
 import "./index.css";
 
@@ -29,9 +30,9 @@ export default class BannerText extends Component {
 						lefting.
 					</h4>
 					<div className="banner-button">
-						<a className="get-started-btn" href="!#">
+						<Link to="/auth" className="get-started-btn" >
 							Get Started
-						</a>
+						</Link>
 					</div>
 				</div>
 				<div className="opacity-background"> </div>

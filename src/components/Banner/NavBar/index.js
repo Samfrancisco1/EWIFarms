@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import { Nav, Navbar } from "react-bootstrap";
 
-import logo from "../../../assets/images/logo.png";
+import logo2 from "../../../assets/images/logo2.png";
 
 export default function NabBar() {
 
@@ -33,7 +33,7 @@ export default function NabBar() {
 	return (
 		<div className="navigation">
 			<Navbar id={ navbarColor } style={{color: "#fff"}} collapseOnSelect expand="lg" fixed="top">
-				<Navbar.Brand href="#home">EWIFARMS</Navbar.Brand>
+				<Navbar.Brand href="#home"><img style={{width: "150px", height: "30px"}} src={logo2} alt="Nav Brand" /></Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse className="justify-content-end">
 					<Nav className="navlinks" variant="pills" defaultActiveKey="#home">

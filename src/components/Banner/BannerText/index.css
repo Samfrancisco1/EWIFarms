@@ -54,3 +54,19 @@
 	width: 100px;
 	border-radius: 20px;
 }
+
+.login:focus {
+	text-decoration: none;
+	color: #fff;
+}
+
+.banner-button .login{
+	text-decoration: none;
+	color: rgb(185, 29, 115);
+	border: 2px solid rgb(185, 29, 115);
+	padding: 10px 50px;
+	font-size: 15px;
+	width: 100px;
+	border-radius: 20px;
+	margin-left: 20px;
+}
