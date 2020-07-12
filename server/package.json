@@ -1,0 +1,21 @@
+{
+  "name": "ewifarms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"Farm",
+    "invest",
+    "in",
+    "farm",
+    "investment",
+    "nigeria",
+    "farm",
+    "business\""
+  ],
+  "author": "Yabi Francis",
+  "license": "ISC"
+}
