@@ -7,6 +7,7 @@ export default class Calculator extends Component {
 		this.state = {
 			interest: 0,
 			value: "",
+			error: "",
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -14,12 +15,11 @@ export default class Calculator extends Component {
 
 	handleChange(event) {
 		this.setState({ value: event.target.value });
-		console.log(this.state.value);
-  }
-  
-  calculateInterest(amount) {
-		return (amount * 30) / 100; 
-  }
+		this.setState({ error: "Minimum of NGN 150,000" });
+	}
+	calculateInterest(amount) {
+		return (amount * 30) / 100;
+	}
 
 	render() {
 		return (
@@ -38,9 +38,13 @@ export default class Calculator extends Component {
 							onChange={this.handleChange}
 							placeholder="Enter Amount"
 						/>
-						{this.state.value < 150000
-							? <label className="error">Minimum investment of NGN 150,000</label> 
-            : <label className="interest">Interest: NGN {this.calculateInterest(this.state.value)}</label> }
+						{this.state.value < 150000 ? (
+							<label className="error">{this.state.error}</label>
+						) : (
+							<label className="interest">
+								Interest: NGN {this.calculateInterest(this.state.value)}
+							</label>
+						)}
 					</form>
 				</section>
 			</>
