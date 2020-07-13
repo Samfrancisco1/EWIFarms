@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Menu, Avatar } from "antd";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, useLocation } from "react-router-dom";
 import {
 	MenuUnfoldOutlined,
 	CalculatorOutlined,
@@ -35,7 +35,16 @@ export default class Dashboard extends React.Component {
 		this.setState({ collapsed });
 	};
 
+	returnLocation = () => {
+		let location = useLocation();
+		location.toUpperCase();
+		console.log(location);
+		
+		return location;
+	}
+
 	render() {
+		
 		return (
 			<Router>
 				<Layout style={{ minHeight: "100vh" }}>
@@ -45,7 +54,10 @@ export default class Dashboard extends React.Component {
 						onCollapse={this.onCollapse}
 					>
 						<div className="logo">
-							<img src={ this.state.collapsed === false? Logo : Logo3} alt="Logo" />
+							<img
+								src={this.state.collapsed === false ? Logo : Logo3}
+								alt="Logo"
+							/>
 						</div>
 						<Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
 							<Avatar
@@ -101,22 +113,24 @@ export default class Dashboard extends React.Component {
 						</Menu>
 					</Sider>
 					<Layout className="site-layout">
-						<Header className="site-layout-background" style={{ padding: 0 }} />
+						<Header className="site-layout-background" style={{ padding: 0 }} >
+								<h3>{ this.returnLocation }</h3>
+						</Header>
 						<Content style={{ margin: "0 16px" }}>
 							<div
 								className="site-layout-background"
-								style={{ padding: 24, minHeight: 360, marginTop: 20 }}
+								style={{
+									padding: 24,
+									minHeight: 360,
+									marginTop: 20,
+								}}
 							>
 								<Route exact path="/dashboard" component={Home} />
 								<Route exact path="/profile" component={Profile} />
 								<Route exact path="/notification" component={Notification} />
 								<Route exact path="/calculator" component={Calculator} />
 								<Route exact path="/deposit" component={Deposit} />
-								<Route
-									exact
-									path="/withdraw"
-									component={Withdraw}
-								/>
+								<Route exact path="/withdraw" component={Withdraw} />
 								<Route exact path="/History" component={History} />
 							</div>
 						</Content>

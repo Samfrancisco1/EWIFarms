@@ -1,0 +1,29 @@
+.card-container {
+	display: flex;
+	flex-direction: row;
+}
+.card-icon {
+	height: 80px;
+	width: 40%;
+	background-color: rgb(255, 153, 0);
+	box-shadow: "0 4px 8px 0 rgba(0,0,0,0.2) ";
+	border-radius: 10px;
+}
+
+.card-content {
+	margin-left: 5px;
+	padding: 0px;
+	justify-content: start;
+}
+
+.card-title p {
+	margin-top: 0px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.card-amount p {
+	margin-top: 0px;
+	font-size: 15px;
+	font-weight: bold;
+}
