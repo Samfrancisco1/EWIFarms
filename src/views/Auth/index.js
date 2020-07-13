@@ -25,6 +25,7 @@ export default class Auth extends Component {
 	render() {
 		return (
 			<>
+            
 				<div className="auth">
 					<div className="forms-container">
 						<div className="signin-signup">
