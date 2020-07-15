@@ -32,7 +32,7 @@ export default function TotalReturn() {
 								<p>Total Returns</p>
 							</div>
 							<div className="card-amount">
-								<p>NGN 500,000.00</p>
+								<p>NGN 0</p>
 							</div>
 						</div>
 					</div>

@@ -13,8 +13,10 @@ app.use(
 );
 
 var Users = require("./routes/Users");
+//var Transactions = require("./routes/Transactions");
 
 app.use("/", Users);
+//app.use("/transactions", Transactions);
 
 app.listen(port, function () {
 	console.log("Server is running on port: " + port);

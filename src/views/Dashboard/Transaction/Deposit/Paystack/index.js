@@ -6,15 +6,16 @@ import axios from "../../../../../util/axios";
 import "./index.css";
 
 export default function Paystack() {
-	let token = localStorage.usertoken;
-	let publicKey = "pk_test_f6f2dc3bd34ccb1e1a6f8da42cf27061767c535c";
-	let amount = parseInt(localStorage.depositAmount) * 100;
-	let decoded = jwt_decode(token);
-	let name = decoded.name;
-	let email = decoded.email;
-	let phone = decoded.phone;
-	let date = Date();
-	let invoice = Date.now();
+	const token = localStorage.usertoken;
+	const publicKey = "pk_test_f6f2dc3bd34ccb1e1a6f8da42cf27061767c535c";
+	const amount = parseInt(localStorage.depositAmount) * 100;
+	const decoded = jwt_decode(token);
+	const name = decoded.name;
+	const email = decoded.email;
+	const phone = decoded.phone;
+	const date = Date();
+    const invoice = Date.now();
+    const type = "Deposit";
 
 	const data = [
 		{
@@ -58,8 +59,16 @@ export default function Paystack() {
 		text: "Pay Now",
 		onSuccess: () => {
             axios.post("./deposit", {
-                
+               email,
+               amount: amount / 100,
+               invoice, 
+               type,
             })
+            .then((res) => {
+                alert(res);
+            }).catch((err) => {
+                alert(err);
+            });
         },
 		onClose: () => alert("Are you sure you want to leave"),
 	};

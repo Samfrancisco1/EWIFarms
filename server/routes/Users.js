@@ -5,7 +5,9 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 const User = require("../models/user");
+const Transaction = require("../models/transactions");
 users.use(cors());
+
 
 process.env.SECRET_KEY = "secret";
 
@@ -68,6 +70,25 @@ users.post("/login", (req, res) => {
 		})
 		.catch((err) => {
 			res.status(400).json({ error: err });
+		});
+});
+
+users.post("/deposit", (req, res) => {
+	const today = new Date();
+	const transactionData = {
+		email: req.body.email,
+		amount: req.body.amount,
+        invoice: req.body.invoice,
+        type: req.body.type,
+		date: today,
+	};
+
+	Transaction.create(transactionData)
+		.then((data) => {
+			res.json({ status: data.type + "Inserted!" });
+		})
+		.catch((err) => {
+			res.send("error: " + err);
 		});
 });
 
