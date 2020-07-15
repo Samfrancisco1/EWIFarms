@@ -1,6 +1,11 @@
 import React from "react";
 import { Layout, Menu, Avatar } from "antd";
-import { BrowserRouter as Router, Route, Link, useLocation } from "react-router-dom";
+import {
+	BrowserRouter as Router,
+	Route,
+	Link,
+	useLocation,
+} from "react-router-dom";
 import {
 	MenuUnfoldOutlined,
 	CalculatorOutlined,
@@ -9,6 +14,7 @@ import {
 	UserOutlined,
 	LoginOutlined,
 } from "@ant-design/icons";
+import { jwt_decode } from "jwt-decode";
 import "./index.css";
 import Footer from "./Footer";
 import Logo from "../../assets/images/logo2.png";
@@ -39,12 +45,33 @@ export default class Dashboard extends React.Component {
 		let location = useLocation();
 		location.toUpperCase();
 		console.log(location);
-		
+
 		return location;
+	};
+
+	componentDidMount() {
+		const token = localStorage.usertoken;
+		if (token == null) {
+			this.props.history.push(`/auth`);
+		}
+
+		const decoded = jwt_decode(token);
+		if(){
+			
+		}
+		this.setState({
+			name: decoded.name,
+			image: decoded.image,
+			email: decoded.email,
+		});
 	}
 
+	handleClick = () => {
+		localStorage.removeItem("usertoken");
+		this.props.history.push(`/`);
+	};
+
 	render() {
-		
 		return (
 			<Router>
 				<Layout style={{ minHeight: "100vh" }}>
@@ -107,14 +134,18 @@ export default class Dashboard extends React.Component {
 							<Menu.Item key="4" icon={<UserOutlined />}>
 								<Link to="./profile">Profile</Link>
 							</Menu.Item>
-							<Menu.Item key="5" icon={<LoginOutlined />}>
+							<Menu.Item
+								onClick={() => this.handleClick()}
+								key="5"
+								icon={<LoginOutlined />}
+							>
 								Logout
 							</Menu.Item>
 						</Menu>
 					</Sider>
 					<Layout className="site-layout">
-						<Header className="site-layout-background" style={{ padding: 0 }} >
-								<h3>{ this.returnLocation }</h3>
+						<Header className="site-layout-background" style={{ padding: 0 }}>
+							<h3>{this.returnLocation}</h3>
 						</Header>
 						<Content style={{ margin: "0 16px" }}>
 							<div

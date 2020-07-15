@@ -9,6 +9,12 @@ import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 
 class LandingPage extends Component {
+	componentDidMount(){
+		const token = localStorage.usertoken;
+		if(token != null){
+			this.props.history.push(`/dashboard`);
+		}
+	}
 	render() {
 		return (
 			<>
