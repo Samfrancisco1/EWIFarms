@@ -14,7 +14,7 @@ import {
 	UserOutlined,
 	LoginOutlined,
 } from "@ant-design/icons";
-import { jwt_decode } from "jwt-decode";
+import jwt_decode from "jwt-decode";
 import "./index.css";
 import Footer from "./Footer";
 import Logo from "../../assets/images/logo2.png";
@@ -25,6 +25,7 @@ import Profile from "./Profile";
 import Notification from "./Notification";
 import Calculator from "./Calculator";
 import Deposit from "./Transaction/Deposit";
+import Paystack from "./Transaction/Deposit/Paystack";
 import History from "./Transaction/History";
 import Withdraw from "./Transaction/Withdraw";
 
@@ -34,6 +35,9 @@ const { SubMenu } = Menu;
 export default class Dashboard extends React.Component {
 	state = {
 		collapsed: false,
+		name: "",
+		image: "",
+		email: "",
 	};
 
 	onCollapse = (collapsed) => {
@@ -50,15 +54,12 @@ export default class Dashboard extends React.Component {
 	};
 
 	componentDidMount() {
-		const token = localStorage.usertoken;
+		let token = localStorage.usertoken;
 		if (token == null) {
 			this.props.history.push(`/auth`);
 		}
 
-		const decoded = jwt_decode(token);
-		if(){
-			
-		}
+		let decoded = jwt_decode(token);
 		this.setState({
 			name: decoded.name,
 			image: decoded.image,
@@ -108,7 +109,7 @@ export default class Dashboard extends React.Component {
 									color: "#fff",
 								}}
 							>
-								Yabi Francis
+								{this.state.name}
 							</h4>
 							<Menu.Item key="1" icon={<MenuUnfoldOutlined />}>
 								<Link to="./dashboard">Dashboard</Link>
@@ -162,7 +163,8 @@ export default class Dashboard extends React.Component {
 								<Route exact path="/calculator" component={Calculator} />
 								<Route exact path="/deposit" component={Deposit} />
 								<Route exact path="/withdraw" component={Withdraw} />
-								<Route exact path="/History" component={History} />
+								<Route exact path="/history" component={History} />
+								<Route exact path="/paystack" component={Paystack} />
 							</div>
 						</Content>
 						<Footer />

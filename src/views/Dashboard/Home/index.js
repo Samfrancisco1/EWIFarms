@@ -11,7 +11,7 @@ export default function Home() {
 		<>
 			<div className="dashboard">
 				<Row >
-					<Col xs={{ span: 22 }} lg={{ span: 7 }}>
+					<Col xs={{ span: 22, offset: 1 }} lg={{ span: 7 }}>
 						<TotalCard />
 					</Col>
 					<Col xs={{ span: 22, offset: 1 }} lg={{ span: 7, offset: 1 }}>

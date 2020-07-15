@@ -1,0 +1,28 @@
+.deposit-form input[type="number"] {
+    margin-bottom: 10px;
+    width: 70%;
+    height: 40px;
+    border: 1px solid rgb(185, 29, 115);
+    background: #c1c3c9;
+    border-radius: 20px;
+    padding-left: 10px
+}
+
+.deposit-form input[type="number"]:focus {
+    margin-bottom: 10px;
+    width: 70%;
+    height: 40px;
+    border: 1px solid rgb(185, 29, 115);
+    background: #c1c3c9;
+    border-radius: 20px;
+}
+
+.deposit-form button {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(to right, rgb(249, 83, 198), rgb(185, 29, 115));
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+}
