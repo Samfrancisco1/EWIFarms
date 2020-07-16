@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import axios from "../../util/axios";
-import Error from "./Error";
+
 
 import "./index.css";
 import { UserOutlined, EyeOutlined } from "@ant-design/icons";

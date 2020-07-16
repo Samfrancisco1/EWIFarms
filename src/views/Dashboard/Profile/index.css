@@ -1,5 +1,19 @@
 .profile-form input[type="text"] {
-    width: 100%;
-    margin-left: -80px;
-    margin-top: 20px;
+	width: 100%;
+	margin-left: -80px;
+	margin-top: 20px;
+}
+
+.bank input[type="text"] {
+	width: 470px;
+	padding-left: 10px;
+	margin-top: 20px;
+	height: 40px;
+}
+
+.bank input[type="number"] {
+	width: 470px;
+	padding-left: 10px;
+	margin-top: 20px;
+	height: 40px;
 }

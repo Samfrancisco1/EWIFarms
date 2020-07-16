@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { PaystackButton } from "react-paystack";
 import { List } from "antd";
 import jwt_decode from "jwt-decode";

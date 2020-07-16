@@ -6,6 +6,8 @@ const bcrypt = require("bcrypt");
 
 const User = require("../models/user");
 const Transaction = require("../models/transactions");
+const Bank = require("../models/bank");
+
 users.use(cors());
 
 
@@ -91,5 +93,63 @@ users.post("/deposit", (req, res) => {
 			res.send("error: " + err);
 		});
 });
+
+users.post("/bank", (req, res) => {
+
+	const bankData = {
+		name: req.body.name,
+		email: req.body.email,
+		account: req.body.number,
+		bank: req.body.bank,
+	};
+
+	Bank.findOne({
+		where: {
+			email: req.body.email,
+		},
+	})
+		//TODO bcrypt
+		.then((bankDetails) => {
+			if (!bankDetails) {
+					Bank.create(bankData)
+						.then((bankDetails) => {
+							res.json({ status: "Bank Details inserted successfully!" });
+						})
+						.catch((err) => {
+							res.send("error: " + err);
+						});
+
+			} else {
+				res.json({ error: "Bank account already exists" });
+			}
+		})
+		.catch((err) => {
+			res.send("error: " + err);
+		});
+});
+
+users.post("/bank_details", (req, res) => {
+	Bank.findOne({
+		where: {
+			email: req.body.email,
+		},
+	})
+		.then((bank_details) => {
+			if (bank_details) {
+					let token = jwt.sign(bank_details.dataValues, process.env.SECRET_KEY, {
+						expiresIn: 1440,
+					});
+					res.send(token);
+
+			} else {
+				res.status(400).json({ error: "User does not exist" });
+			}
+		})
+		.catch((err) => {
+			res.status(400).json({ error: err });
+		});
+});
+
+
 
 module.exports = users;

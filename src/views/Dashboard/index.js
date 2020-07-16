@@ -15,6 +15,7 @@ import {
 	LoginOutlined,
 } from "@ant-design/icons";
 import jwt_decode from "jwt-decode";
+import axios from "../../util/axios";
 import "./index.css";
 import Footer from "./Footer";
 import Logo from "../../assets/images/logo2.png";
@@ -65,10 +66,24 @@ export default class Dashboard extends React.Component {
 			image: decoded.image,
 			email: decoded.email,
 		});
+
+		axios.post("bank_details", {
+			email: decoded.email
+		})
+		.then(res => {
+			localStorage.setItem("banktoken", res.data);
+			console.log(res.data);
+			
+		})
+		.catch(err => {
+			console.log("error: ", err);
+			
+		});
 	}
 
 	handleClick = () => {
 		localStorage.removeItem("usertoken");
+		localStorage.removeItem("banktoken");
 		this.props.history.push(`/`);
 	};
 
