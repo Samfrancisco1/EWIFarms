@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const db = {}
-const sequelize = new Sequelize('ewifarms', 'root', '', {
+const sequelize = new Sequelize('rachxhml_ewifarms', 'rachxhml_rachxhml', 'ewifarms0987654321', {
   host: 'localhost',
   dialect: 'mysql',
 

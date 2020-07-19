@@ -19,7 +19,7 @@ app.use("/", Users);
 //app.use("/transactions", Transactions);
 
 if(process.env.NODE_ENV === "production"){
-	app.use(express.static("ewifarms/build"))
+	app.use("/", Users);
 }
 
 app.listen(port, function () {

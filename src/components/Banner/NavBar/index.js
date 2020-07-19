@@ -49,10 +49,9 @@ export default function NabBar() {
 				<Navbar.Collapse className="justify-content-end">
 					<Nav className="navlinks" variant="pills" defaultActiveKey="#home">
 						<Nav.Link href="#home">Home</Nav.Link>
-						<Nav.Link href="#how">How it works</Nav.Link>
-						<Nav.Link href="#calculator">Investment Calculator</Nav.Link>
-						<Nav.Link href="#about">About us</Nav.Link>
-						<Nav.Link href="#testimony">Testimony</Nav.Link>
+						<Nav.Link href="#how">How to invest</Nav.Link>
+						<Nav.Link href="/media">Our Media</Nav.Link>
+						<Nav.Link href="/about">About us</Nav.Link>
 						<Nav.Link href="#contact">Contact us</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

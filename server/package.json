@@ -1,0 +1,38 @@
+{
+  "name": "ewifarms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon index.js\" \"npm run client\"",
+    "build": "cd ewifarms && npm run build",
+    "client-install": "cd ewifarms && npm install",
+    "heroku-postbuild": "npm run client-install && npm run build",
+    "client": "cd ewifarms && npm start",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "\"Farm",
+    "invest",
+    "in",
+    "farm",
+    "investment",
+    "nigeria",
+    "farm",
+    "business\""
+  ],
+  "author": "Yabi Francis",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.4",
+    "sequelize": "^6.3.3"
+  }
+}
