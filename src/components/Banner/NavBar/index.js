@@ -38,7 +38,7 @@ export default function NabBar() {
 				expand="lg"
 				fixed="top"
 			>
-				<Navbar.Brand href="#home">
+				<Navbar.Brand href="/">
 					<img
 						style={{ width: "150px", height: "30px" }}
 						src={logo2}
@@ -48,7 +48,7 @@ export default function NabBar() {
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse className="justify-content-end">
 					<Nav className="navlinks" variant="pills" defaultActiveKey="#home">
-						<Nav.Link href="#home">Home</Nav.Link>
+						<Nav.Link href="/">Home</Nav.Link>
 						<Nav.Link href="#how">How to invest</Nav.Link>
 						<Nav.Link href="/media">Our Media</Nav.Link>
 						<Nav.Link href="/about">About us</Nav.Link>

@@ -6,6 +6,7 @@
 	z-index: 10;
 	margin: auto;
 	margin-top: -50px;
+	height: auto;
 }
 
 .about h2 {
@@ -19,4 +20,27 @@
 .about p {
 	margin-top: 30px;
 	text-align: center;
+}
+
+.about-button {
+	padding-bottom: 100px;
+	margin: auto;
+	text-align: center;
+
+}
+
+.more:focus {
+	text-decoration: none;
+	color: #fff;
+}
+
+.about-button .more {
+	text-decoration: none;
+	color: #fff;
+	background: linear-gradient(to right, rgb(249, 83, 198), rgb(185, 29, 115));
+	padding: 10px 50px;
+	font-size: 15px;
+	width: 100px;
+	border-radius: 20px;
+	margin-top: -80px;
 }

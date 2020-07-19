@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 export default function About() {
 	return (
@@ -19,8 +20,14 @@ export default function About() {
 					also her role in building a Home, breeding nation builders and also
 					her contribution towards nation building. Ethel Women Initiative is
 					initiated to enlighten, educate and empower the Nigerian female child
-					to see beyond her physical beauty, embrace her inner beauty
+					to see beyond her physical beauty, embrace her inner beauty and abilities, 
+					moulding her into a #NailjaVirtuousWoman and #NaijaNobleWoman.
 				</p>
+				<div className="about-button">
+					<Link to="/about" className="more">
+						Read More
+					</Link>
+				</div>
 			</section>
 		</>
 	);
